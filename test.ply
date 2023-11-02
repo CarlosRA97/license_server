@@ -1,0 +1,4 @@
+test:
+  url: http://localhost:8080/status/kdjnNzI4NmQ0NmItMTdhMi01ODhiLWI3OTItZmI4ODhjNTAzNmFi
+  method: GET
+  headers: {}
