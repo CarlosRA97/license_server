@@ -1,0 +1,22 @@
+test:  # 2/11/2023, 0:41:06:185
+  request:
+    url: http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVk
+    method: GET
+    headers: {}
+  response:  # 8 ms
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection: close
+      content-length: '81'
+      content-type: application/json
+      date: Wed, 01 Nov 2023 23:41:05 GMT
+    body: |-
+      {
+        "98f4465b-d1ea-6786-5313-f9e13144f25d": {
+          "delay": 0,
+          "expire": "21.10.2024",
+          "id": 1
+        }
+      }
