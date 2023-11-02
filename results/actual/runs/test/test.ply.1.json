@@ -3,10 +3,11 @@
     "name": "test",
     "test": "test",
     "type": "request",
-    "end": "2023-10-25T18:23:06.822Z",
+    "start": "2023-11-02T16:34:19.882Z",
+    "end": "2023-11-02T16:34:20.220Z",
     "result": {
-      "status": "Submitted",
-      "message": "Request 'test' SUBMITTED"
+      "status": "Errored",
+      "message": "Request 'test' ERRORED in 338 ms: request to http://localhost:8080/status/kdjnNzI4NmQ0NmItMTdhMi01ODhiLWI3OTItZmI4ODhjNTAzNmFi failed, reason: "
     },
     "request": {
       "name": "test",
@@ -14,22 +15,7 @@
       "url": "http://localhost:8080/status/kdjnNzI4NmQ0NmItMTdhMi01ODhiLWI3OTItZmI4ODhjNTAzNmFi",
       "method": "GET",
       "headers": {},
-      "submitted": "2023-10-25T18:23:06.233Z"
-    },
-    "response": {
-      "runId": "b0180f8a4863",
-      "status": {
-        "code": 200,
-        "message": "OK"
-      },
-      "headers": {
-        "connection": "close",
-        "content-length": "50",
-        "content-type": "application/json; charset=utf-8",
-        "date": "Wed, 25 Oct 2023 18:23:06 GMT"
-      },
-      "body": "{\n  \"message\": \"7286d46b-17a2-588b-b792-fb888c5036ab\"\n}",
-      "time": 159
+      "submitted": "2023-11-02T16:34:19.903Z"
     }
   }
 ]
