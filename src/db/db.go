@@ -17,7 +17,10 @@ type DB struct {
 func New() *DB {
 	dsn := "host=localhost user=gorm password=gorm dbname=gorm port=5432 sslmode=disable TimeZone=Europe/Madrid"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-	db.AutoMigrate(&Client{}, &License{})
+	if err != nil {
+		log.Fatalln(err)
+	}
+	err = db.AutoMigrate(&Client{}, &License{})
 	if err != nil {
 		log.Fatalln(err)
 	}
