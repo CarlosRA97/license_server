@@ -1,8 +1,4 @@
 test:
-<<<<<<< HEAD
-  url: http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVk
-=======
-  url: http://localhost:8080/status/kdjnNzI4NmQ0NmItMTdhMi01ODhiLWI3OTItZmI4ODhjNTAzNmFi
->>>>>>> 46ef6a99202f29b04dd7957455ebab2c9062344c
+  url: http://127.0.0.1:3000/activate/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVk
   method: GET
   headers: {}

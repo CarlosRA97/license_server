@@ -1,36 +1,32 @@
 package main
 
 import (
-	"encoding/base64"
+	"license_server/src/db"
+	"license_server/src/utils"
+	"license_server/src/views"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
 )
 
-func parseBase64(uuid string) string {
-	rawDecodedText, err := base64.StdEncoding.DecodeString(uuid)
-	if err != nil {
-		panic(err)
-	}
-	return string(rawDecodedText)
-}
-
 func main() {
 	app := fiber.New()
-	db := openDB()
+	db := db.New()
 
-	app.Get("/status/:uuid", db.getLicenseStatus)
+	app.Get("/status/:uuid", db.GetLicenseStatus)
 
 	app.Get("/activate/:uuid", func(c *fiber.Ctx) error {
-		return c.SendStatus(200)
+		uuid := utils.ParseBase64(c.Params("uuid"))
+		index := views.Index(uuid)
+		return utils.RenderResponse(c, index)
 	})
 
 	app.Post("/activate/:documentId/:uuid", func(c *fiber.Ctx) error {
 		uuidb64 := c.Params("uuid")
-		uuid := parseBase64(uuidb64)
+		uuid := utils.ParseBase64(uuidb64)
 		didb64 := c.Params("documentId")
-		did := parseBase64(didb64)
-		license := db.addLicense(did, uuid, time.Now().AddDate(1, 0, 0))
+		did := utils.ParseBase64(didb64)
+		license := db.AddLicense(did, uuid, time.Now().AddDate(1, 0, 0))
 		return c.JSON(&fiber.Map{
 			license.UUID: &fiber.Map{
 				"id":     license.ID,
