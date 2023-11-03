@@ -1,8 +1,6 @@
 package utils
 
 import (
-	"bytes"
-	"context"
 	"encoding/base64"
 
 	"github.com/a-h/templ"
@@ -15,12 +13,6 @@ func ParseBase64(uuid string) string {
 		panic(err)
 	}
 	return string(rawDecodedText)
-}
-
-func Render(component templ.Component) string {
-	html := new(bytes.Buffer)
-	component.Render(context.Background(), html)
-	return html.String()
 }
 
 func RenderResponse(c *fiber.Ctx, component templ.Component) error {
