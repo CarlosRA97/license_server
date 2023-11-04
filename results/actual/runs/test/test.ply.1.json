@@ -3,7 +3,7 @@
     "name": "test",
     "test": "test",
     "type": "request",
-    "end": "2023-11-03T16:38:26.186Z",
+    "end": "2023-11-04T05:11:05.665Z",
     "result": {
       "status": "Submitted",
       "message": "Request 'test' SUBMITTED"
@@ -11,25 +11,25 @@
     "request": {
       "name": "test",
       "type": "request",
-      "url": "http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVk",
+      "url": "http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVl",
       "method": "GET",
       "headers": {},
-      "submitted": "2023-11-03T16:38:26.159Z"
+      "submitted": "2023-11-04T05:11:05.636Z"
     },
     "response": {
-      "runId": "ba05ab8cd02",
+      "runId": "2032666a860a",
       "status": {
-        "code": 200,
-        "message": "OK"
+        "code": 404,
+        "message": "Not Found"
       },
       "headers": {
         "connection": "close",
-        "content-length": "81",
-        "content-type": "application/json",
-        "date": "Fri, 03 Nov 2023 16:38:25 GMT"
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Sat, 04 Nov 2023 05:11:05 GMT"
       },
-      "body": "{\n  \"98f4465b-d1ea-6786-5313-f9e13144f25d\": {\n    \"delay\": 0,\n    \"expire\": \"21.10.2024\",\n    \"id\": 1\n  }\n}",
-      "time": 12
+      "body": "Not Found",
+      "time": 14
     }
   }
 ]

@@ -7,12 +7,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func ParseBase64(uuid string) string {
+func ParseBase64(uuid string) (string, error) {
 	rawDecodedText, err := base64.StdEncoding.DecodeString(uuid)
-	if err != nil {
-		panic(err)
-	}
-	return string(rawDecodedText)
+	return string(rawDecodedText), err
 }
 
 func RenderResponse(c *fiber.Ctx, component templ.Component) error {

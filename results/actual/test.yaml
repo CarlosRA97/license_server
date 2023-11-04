@@ -1,22 +1,15 @@
-test:  # 3/11/2023, 17:38:26:159
+test:  # 4/11/2023, 6:11:05:636
   request:
-    url: http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVk
+    url: http://127.0.0.1:3000/status/OThmNDQ2NWItZDFlYS02Nzg2LTUzMTMtZjllMTMxNDRmMjVl
     method: GET
     headers: {}
-  response:  # 12 ms
+  response:  # 14 ms
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       connection: close
-      content-length: '81'
-      content-type: application/json
-      date: Fri, 03 Nov 2023 16:38:25 GMT
-    body: |-
-      {
-        "98f4465b-d1ea-6786-5313-f9e13144f25d": {
-          "delay": 0,
-          "expire": "21.10.2024",
-          "id": 1
-        }
-      }
+      content-length: '9'
+      content-type: text/plain; charset=utf-8
+      date: Sat, 04 Nov 2023 05:11:05 GMT
+    body: Not Found
